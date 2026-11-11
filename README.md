@@ -224,8 +224,6 @@ Read and complete `model_card.md`:
 
 [**Model Card**](model_card.md)
 
-*Draft written with AI assistance; edit in your own words.*
-
-Recommenders turn data into predictions by comparing numbers and labels: a few additions and a distance calculation were enough to produce a ranked list that felt like real recommendations. The reasons list made each ranking easy to audit, and that is how I found problems, such as Gym Hero appearing for happy-pop fans.
+Recommenders turn data into predictions by comparing labels and numbers: a few additions and a distance calculation were enough to produce a ranked list that felt like real recommendations. The reasons list made each ranking easy to audit, and that is how I found problems such as Gym Hero appearing for happy-pop fans. I used AI to draft code and brainstorm edge cases, and checked its work by running the program and comparing the output with my write-up. The full log is in [ai_interactions.md](ai_interactions.md).
 
 Bias shows up through weights and data. Genre is worth twice a mood match, so users with mixed tastes get stuck in one genre, and genres with a single song get thin results. Real systems have the same risk at scale: whatever the scoring rule over-values becomes a filter bubble.

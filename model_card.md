@@ -77,6 +77,10 @@ Genre is worth twice as much as mood and exact-match only, so the system over-re
 
 ## 9. Personal Reflection
 
-*Draft by the AI assistant. Please rewrite it in your own words before submitting.*
+**Biggest learning moment.** A recommender can be very simple and still feel smart. Three additions (genre, mood, energy closeness) produced lists I agreed with for the normal profiles. The weirdness only showed up in the edge cases, which is where the real design problems live.
 
-The biggest learning moment was seeing how a tiny rule (add points for matches, subtract distance for energy) already produces results that feel like recommendations. The reasons list made that visible: every ranking was just a few additions. The AI helped me scaffold code and brainstorm edge-case profiles, but I still had to check things by running the code, for example confirming the experiment's scores really did change as predicted. If I extended this, I would add similarity between genres and mood, then see whether the bias I found gets better or just moves somewhere else.
+**How AI helped, and where I double-checked it.** I used an AI assistant to research how real systems work, write the first version of the code, expand the dataset and suggest edge-case profiles. I did not accept anything unchecked: I ran the program, compared the printed scores with the numbers in my write-up, fixed an import error from the starter code, and re-ran the weight experiment myself to confirm the rank change was real. The AI is fast at drafts but can state things confidently without testing them, so the run-and-compare step mattered most.
+
+**What surprised me.** The "Gym Hero for happy pop" result. Nothing is broken: the rules are just blind to the difference between intense and happy because a mood mismatch costs nothing. The explanations made that bug easy to see, which is why I would keep them in any real system.
+
+**What I would try next.** Give related genres and moods partial credit, use valence and acousticness, add a diversity rule for the top 5, and test with a much bigger catalog to see whether the genre bias gets better or just moves.
